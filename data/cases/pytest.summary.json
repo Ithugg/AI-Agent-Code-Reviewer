@@ -1,0 +1,48 @@
+{
+  "repo": "pytest",
+  "head": "8721173580390a9d297e5af06cac3f0b6841f425",
+  "since": "2021-01-01",
+  "max_changed_lines": 500,
+  "generated_at": "2026-09-24T20:33:04+00:00",
+  "cases": 84,
+  "bugs": 100,
+  "rejected_pairs": 75,
+  "review_units": {
+    "pr": 68,
+    "commit": 16
+  },
+  "bug_locality": {
+    "in_diff": 99,
+    "outside_diff": 1
+  },
+  "bugs_per_case": {
+    "4": 2,
+    "1": 74,
+    "3": 2,
+    "2": 6
+  },
+  "case_flags": {
+    "pr_too_large": 13,
+    "no_pr": 3
+  },
+  "bug_flags": {
+    "anchor_only": 18
+  },
+  "rejection_reasons": {
+    "no_fix_test": 53,
+    "pr_too_large": 24,
+    "commit_too_large": 21,
+    "no_bug_lines": 2
+  },
+  "bug_summary_sources": {
+    "release_note": 100
+  },
+  "bugs_by_fix_year": {
+    "2026": 24,
+    "2025": 11,
+    "2024": 18,
+    "2023": 16,
+    "2022": 16,
+    "2021": 15
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "repo": "django",
+  "head": "951d13c77bc120be385c46fc701a1ad93694edd1",
+  "since": null,
+  "max_changed_lines": 500,
+  "generated_at": "2026-09-24T17:10:43+00:00",
+  "cases": 331,
+  "bugs": 395,
+  "rejected_pairs": 249,
+  "review_units": {
+    "pr": 279,
+    "commit": 52
+  },
+  "bug_locality": {
+    "outside_diff": 115,
+    "in_diff": 280
+  },
+  "bugs_per_case": {
+    "6": 1,
+    "1": 291,
+    "2": 28,
+    "5": 3,
+    "3": 5,
+    "4": 3
+  },
+  "case_flags": {
+    "no_pr": 45,
+    "pr_too_large": 5,
+    "pr_range_mismatch": 2
+  },
+  "bug_flags": {
+    "anchor_only": 75,
+    "multi_origin": 13
+  },
+  "rejection_reasons": {
+    "pr_too_large": 72,
+    "no_bug_lines": 74,
+    "commit_too_large": 82,
+    "no_fix_test": 115,
+    "no_pr": 68,
+    "multi_origin": 9,
+    "pr_range_mismatch": 1
+  },
+  "bug_summary_sources": {
+    "release_note": 236,
+    "fix_subject": 159
+  },
+  "bugs_by_fix_year": {
+    "2026": 18,
+    "2025": 48,
+    "2024": 26,
+    "2023": 53,
+    "2022": 45,
+    "2021": 42,
+    "2020": 41,
+    "2019": 35,
+    "2018": 31,
+    "2017": 30,
+    "2016": 5,
+    "2015": 4,
+    "2014": 8,
+    "2013": 8,
+    "2012": 1
+  }
+}

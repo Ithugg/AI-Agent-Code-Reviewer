@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "catchrate"
+version = "0.1.0"
+description = "An AI code review agent and a benchmark of real bugs that got past human review."
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=1.8",
+    "httpx>=0.28",
+    "psutil>=6",
+    "pydantic>=2.13",
+    "uv>=0.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+dashboard = ["streamlit>=1.64"]
+
+[project.scripts]
+catchrate = "catchrate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+# Keep pytest's temp dirs inside the project: the Microsoft Store Python
+# silently redirects writes under %TEMP% to a private copy.
+addopts = "--basetemp=.pytest-tmp"

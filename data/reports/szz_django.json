@@ -1,0 +1,63 @@
+{
+  "repo": "django",
+  "head": "951d13c77bc120be385c46fc701a1ad93694edd1",
+  "since": null,
+  "fixes": 633,
+  "add_only_fixes": 144,
+  "variants": {
+    "bszz": {
+      "commit": {
+        "fixes": 633,
+        "with_candidates": 489,
+        "mean_candidates": 1.6155419222903886,
+        "recall": 0.5402843601895735,
+        "precision": 0.43670886075949367,
+        "top1": 0.49447077409162715
+      },
+      "pr": {
+        "fixes": 633,
+        "with_candidates": 489,
+        "mean_candidates": 1.6012269938650308,
+        "recall": 0.5418641390205371,
+        "precision": 0.44189016602809705,
+        "top1": 0.4976303317535545
+      }
+    },
+    "bszz+ignore_revs": {
+      "commit": {
+        "fixes": 633,
+        "with_candidates": 489,
+        "mean_candidates": 1.5930470347648262,
+        "recall": 0.5481832543443917,
+        "precision": 0.4492939666238768,
+        "top1": 0.5039494470774092
+      },
+      "pr": {
+        "fixes": 633,
+        "with_candidates": 489,
+        "mean_candidates": 1.5787321063394684,
+        "recall": 0.5497630331753555,
+        "precision": 0.45466321243523317,
+        "top1": 0.5055292259083728
+      }
+    },
+    "bszz+ignore_revs+anchors": {
+      "commit": {
+        "fixes": 633,
+        "with_candidates": 579,
+        "mean_candidates": 1.9378238341968912,
+        "recall": 0.6050552922590837,
+        "precision": 0.34402852049910876,
+        "top1": 0.5371248025276462
+      },
+      "pr": {
+        "fixes": 633,
+        "with_candidates": 579,
+        "mean_candidates": 1.922279792746114,
+        "recall": 0.6097946287519748,
+        "precision": 0.3495058400718778,
+        "top1": 0.5418641390205371
+      }
+    }
+  }
+}

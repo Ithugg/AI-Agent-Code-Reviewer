@@ -1,0 +1,46 @@
+{
+  "repo": "aiohttp",
+  "head": "7577ad38a73dc0447475dc929d3a2247ba7fd02a",
+  "since": "2021-01-01",
+  "max_changed_lines": 500,
+  "generated_at": "2026-09-24T20:55:24+00:00",
+  "cases": 88,
+  "bugs": 111,
+  "rejected_pairs": 69,
+  "review_units": {
+    "pr": 87,
+    "commit": 1
+  },
+  "bug_locality": {
+    "in_diff": 111
+  },
+  "bugs_per_case": {
+    "2": 15,
+    "1": 69,
+    "3": 4
+  },
+  "case_flags": {
+    "no_pr": 1
+  },
+  "bug_flags": {
+    "anchor_only": 16
+  },
+  "rejection_reasons": {
+    "pr_too_large": 46,
+    "commit_too_large": 47,
+    "no_bug_lines": 1,
+    "no_fix_test": 21,
+    "no_pr": 2
+  },
+  "bug_summary_sources": {
+    "release_note": 111
+  },
+  "bugs_by_fix_year": {
+    "2026": 39,
+    "2025": 11,
+    "2024": 40,
+    "2023": 7,
+    "2022": 2,
+    "2021": 12
+  }
+}

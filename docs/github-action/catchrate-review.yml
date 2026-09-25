@@ -1,0 +1,40 @@
+# Catch Rate as a pull-request reviewer.
+#
+# Copy this file to .github/workflows/catchrate-review.yml in a repository you own, add a
+# repository secret ANTHROPIC_API_KEY, and replace <your-github-user> below. Every review costs
+# money: estimate first with `catchrate estimate`, and keep the model and version below modest.
+# The reviewer only reads code (v1); it never runs the pull request's code.
+name: Catch Rate review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: catchrate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    # Pull requests from forks get no secrets, and their descriptions are untrusted input.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Catch Rate
+        run: pip install "catchrate @ git+https://github.com/<your-github-user>/catch-rate.git"
+      - name: Review the pull request
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          catchrate --data-dir "$RUNNER_TEMP/catchrate" review-pr
+          "${{ github.repository }}#${{ github.event.pull_request.number }}"
+          --version v1 --model claude-sonnet-5 --min-confidence 0.6 --post
